@@ -27,11 +27,11 @@ async function fetchRSS() {
       const description = item.querySelector('description').textContent;
 
       output += `
-      <div class="news-item">
-        <h3><a href="${link}" target="_blank">${title}</a></h3>
-        <p>${description}</p>
-      </div>
-      `;
+            <div class="news-item">
+                <h3><a href="${link}" target="_blank">${title}</a></h3>
+                <p>${description}</p>
+            </div>
+            `;
     });
 
     document.querySelector('#news-container').innerHTML = output;
@@ -41,6 +41,7 @@ async function fetchRSS() {
   }
 }
 
+// Вызов функции для загрузки новостей
 fetchRSS();
 
 
