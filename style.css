@@ -1,0 +1,155 @@
+#rec794569622 {
+  text-align: center;
+}
+.header {
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  top: 63px;
+}
+
+.header__container {
+  margin: 0 auto;
+  border: 3px solid #357eeb;
+  border-radius: 30px;
+  padding-right: 140px;
+  padding-left: 140px;
+  max-width: 600px; /* Начальная ширина */
+  height: 80px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  background-color: transparent;
+  font-family: "SF Pro Display", sans-serif;
+  transition:
+    max-width 0.5s ease,
+    background 0.5s ease; /* Изменено на max-width */
+}
+
+.header__container.active {
+  max-width: 1000px; /* Ширина при активации */
+  background-color: rgba(207, 226, 255, 0.7);
+}
+
+.logo {
+  margin-right: 30px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #332f36;
+  cursor: pointer;
+  font-family: "SF Pro Display", sans-serif;
+  transition: all 0.3s;
+}
+
+.btn-decor {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: linear-gradient(90deg, #357eeb 0%, #357eeb 100%);
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.btn-decor svg {
+  margin-right: 10px;
+}
+
+.exit {
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: #cfe2ff;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #324195;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.none {
+  position: absolute;
+  transform: translateX(500px);
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.teleg,
+.inst {
+  transition: fill 0.3s ease;
+}
+
+.teleg:hover path {
+  fill: #357eeb;
+}
+
+.inst:hover path {
+  fill: #357eeb;
+}
+
+.exit:hover {
+  background-color: #324195;
+  color: #fff;
+}
+
+.btn-decor:hover {
+  background-color: #324195;
+  color: #fff;
+}
+
+.btn-blue {
+  transition: background 0.3s;
+  padding: 15px;
+  border-radius: 10px;
+}
+.btn-blue:hover {
+  background-color: #357eeb;
+}
+
+.btn-hover--decor {
+  position: relative;
+}
+
+.btn-hover--decor::after {
+  position: absolute;
+  right: -10px;
+  top: 10px;
+  content: "";
+  display: block;
+  background-repeat: no-repeat;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 6px solid black;
+  transition: transform 0.3s ease;
+}
+
+.btn-hover--decor:hover.btn-hover--decor::after {
+  transform: rotate(180deg);
+  transition: animation 0.3s;
+}
+
+.marquee-item {
+  transition: box-shadow 0.3s ease-in-out;
+}
+.marquee-item:hover {
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(176, 176, 176, 0.15);
+  -moz-box-shadow: 0px 5px 10px 2px rgba(176, 176, 176, 0.15);
+  box-shadow: 0px 5px 10px 2px rgba(176, 176, 176, 0.15);
+  visibility: visible;
+}
